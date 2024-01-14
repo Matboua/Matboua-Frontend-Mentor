@@ -1,0 +1,144 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+/* Start Variables */
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+/* Start Global Rules */
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+body::-webkit-scrollbar {
+  width: 12.5px;
+}
+body::-webkit-scrollbar-thumb {
+  background: #1e1fcd;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #ddd;
+  border: 1px solid #ccc;
+}
+
+/* Start Theme */
+main {
+  min-height: 100vh;
+  background-color: var(--Very-Light-Gray);
+  padding: 20px 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  padding: 15px 0;
+}
+/* Start Text */
+.text {
+  text-align: center;
+}
+.text p:first-child {
+  color: var(--Grayish-Blue);
+  font-size: 1.65rem;
+  font-weight: 200;
+}
+.text h3 {
+  font-size: 1.65rem;
+  margin-bottom: 10px;
+}
+.text p:last-child {
+  max-width: 600px;
+  font-size: 15px;
+  color: var(--Grayish-Blue);
+  line-height: 1.5;
+  margin-bottom: 50px;
+}
+/* Start Cards */
+.cards {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(auto, 300px));
+  gap: 20px;
+  justify-content: center;
+}
+.cards .item {
+  /* width: 100%; */
+  height: 220px;
+  padding: 25px;
+  border-top: 4px solid;
+  background-color: #fff;
+  box-shadow: 2px 10px 10px #00000020;
+  position: relative;
+}
+.cards .item p {
+  font-size: 14px;
+  margin-top: 5px;
+  color: var(--Grayish-Blue);
+}
+.item img {
+  width: 60px;
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+}
+.cards .item-1 {
+  border-color: var(--Cyan);
+}
+.cards .item-2 {
+  border-color: var(--Red);
+}
+.cards .item-3 {
+  border-color: var(--Orange);
+}
+.cards .item-4 {
+  border-color: var(--Blue);
+}
+
+/* Start Media */
+@media (min-width: 1007px) {
+  main {
+    height: 100vh;
+  }
+  .item-3 {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+  .item-1,
+  .item-4 {
+    transform: translateY(calc(50% + 10px));
+  }
+}
+@media (max-width: 373px) {
+  main {
+    padding: 5px;
+  }
+  .text p:first-child {
+    font-size: 1.4rem;
+    white-space: nowrap;
+  }
+  .text h3 {
+    font-size: 1.4rem;
+    white-space: nowrap;
+  }
+  .text p:last-child {
+    padding: 0 5px;
+  }
+}
