@@ -117,6 +117,7 @@ main {
 @media (min-width: 1007px) {
   main {
     height: 100vh;
+    overflow-y: hidden;
   }
   .item-3 {
     grid-area: 2 / 2 / 3 / 3;
